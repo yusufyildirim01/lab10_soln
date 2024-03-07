@@ -176,9 +176,9 @@ implementation of merge and insertion sort above.
                    |    List length 10    |  List length 1000
                    |    Time (msecs)      |  Time (msecs)
    ------------------------------------------------------------
-   Insertion Sort  |    0.00286           |   10.72379
+   Insertion Sort  |    0.00286           |    7.853
    ------------------------------------------------------------
-   Merge Sort      |    0.00405           |    1.25098
+   Merge Sort      |    0.00691           |    1.002
    ------------------------------------------------------------
 
    In summary, merge sort is a little slower on the short list but
@@ -213,10 +213,13 @@ implementation of merge and insertion sort above.
                    |    List length 10    |  List length 1000
                    |    Time (msecs)      |  Time (msecs)
    ------------------------------------------------------------
-   Insertion Sort  |    0.00180           |   9.95549
+   Insertion Sort  |    0.00134           |   7.2716
    ------------------------------------------------------------
-   Merge Sort      |    0.00312           |   0.90328
+   Merge Sort      |    0.00373           |   1.1035
    ------------------------------------------------------------
+
+   The numbers we report below are all based on averaging 50 trials,
+   as here.
  *)
 
 (*====================================================================
@@ -315,13 +318,13 @@ Exercise 6: Additive constants
 Fill in the table below.
 ....................................................................*)
 
-(*               |    List length 10    |  List length 1000
-                 |    Time (msecs)      |  Time (msecs)  
-------------------------------------------------------------
-Insertion Sort   |     2.15             |  10.3
-------------------------------------------------------------
-Delay Merge Sort |    51.6              |  56.0
-------------------------------------------------------------*)
+(*               | Length 10    | Length 1000  | Length 10000
+                 | Time (msecs) | Time (msecs) | Time (msecs)
+--------------------------------------------------------------
+Insertion Sort   |    0.00134   |   7.2716     |  868.56
+--------------------------------------------------------------
+Delay Merge Sort |   54.223     |  57.144      |   73.369
+--------------------------------------------------------------*)
 
 (* You likely found that InsertSort was faster than DelayMergeSort,
 even on a list of length 1000. Increase the length of the list being
@@ -353,13 +356,13 @@ asymptotic behavior of InsertSort and DoubleMergeSort, and fill in the
 table below.
 ....................................................................*)
 
-(*                |    List length 10    |  List length 1000
-                  |    Time (msecs)      |  Time (msecs)  
-------------------------------------------------------------
-Insertion Sort    |    0.00191           |  9.67
-------------------------------------------------------------
-Double Merge Sort |    0.00906           |  1.74
-------------------------------------------------------------*)
+(*                | Length 10    | Length 1000  | Length 10000
+                  | Time (msecs) | Time (msecs) | Time (msecs)
+--------------------------------------------------------------
+Insertion Sort    |    0.00134   |   7.2716     |  868.56
+--------------------------------------------------------------
+Double Merge Sort |    0.00600   |   1.7112     |   24.418
+--------------------------------------------------------------*)
 
 (* Now record a list length for which you found DoubleMergeSort sorted
 faster than InsertSort. *)
@@ -392,13 +395,13 @@ behavior of InsertSort and ExtraTermMergeSort, and fill in the table
 below.
 ....................................................................*)
 
-(*                    |    List length 10    |  List length 1000
-                      |    Time (msecs)      |  Time (msecs)  
------------------------------------------------------------------
-Insertion Sort        |   0.00286            |  10.3
------------------------------------------------------------------
-Extra Term Merge Sort |   0.00620            |  1.05
------------------------------------------------------------------*)
+(*                | Length 10    | Length 1000  | Length 10000
+                  | Time (msecs) | Time (msecs) | Time (msecs)
+--------------------------------------------------------------
+Insertion Sort    |    0.00134   |   7.2716     |  868.56
+--------------------------------------------------------------
+Extra Term MSort  |    0.00422   |   1.0078     |   12.765
+--------------------------------------------------------------*)
 
 (* Now record a list length for which ExtraTermMergeSort works faster
 than InsertSort. *)
