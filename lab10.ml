@@ -20,7 +20,8 @@ complexity, including:
    `Absbook` module source code in the file `absbook.ml` in the CS51
    utilities repository at <https://github.com/cs51/utils>. *)
 
-open CS51Utils ;;
+open CS51Utils 
+;;
 
 (*====================================================================
 Part 1: Empirical analysis of functions
